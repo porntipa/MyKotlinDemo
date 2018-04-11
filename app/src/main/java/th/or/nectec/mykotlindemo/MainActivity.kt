@@ -39,5 +39,13 @@ class MainActivity : AppCompatActivity() {
 
         val url = "https://i.pinimg.com/originals/a6/f1/24/a6f1243576c7430a6eac6cbe3ca711c2.jpg"
         Glide.with(this).load(url).into(mImageview)
+
+
+        val kotlinObj = KotlinClass()
+        kotlinObj.callJava(applicationContext)
+        kotlinObj.callKotlin(applicationContext)
+
+        val javaObj = JavaClass();
+        javaObj.callKotlin(applicationContext)
     }
 }
